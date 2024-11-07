@@ -12,6 +12,7 @@ function ShopKeeperApp(){
                 <th>Name</th>
                 <th>unit_price</th>
                 <th>qty</th>
+                <th>Total</th>
             </thead>
             <tbody>
                 {items.map((item)=>{
