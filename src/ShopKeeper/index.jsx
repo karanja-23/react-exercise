@@ -6,7 +6,9 @@ import Screen from "./screen";
 function ShopKeeperApp() {
   return (
     <div>
+      <div>
       <Screen />
+      </div>
       <table>
         <thead>
           <tr>
