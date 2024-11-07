@@ -1,10 +1,12 @@
 import React from "react";
 import items from "./items";
 import "./index.css";
+import Screen from "./screen";
 
 function ShopKeeperApp() {
   return (
     <div>
+      <Screen />
       <table>
         <thead>
           <tr>
