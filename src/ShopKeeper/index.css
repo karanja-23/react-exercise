@@ -34,11 +34,33 @@ td {
   padding: 10px;
   border: 1px solid #ddd; /* Border for cells */
 }
+#screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-group {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 5px;
+  max-width: 240px;
+  margin-bottom: 10px;
+}
+
+
+.navigation {
+  display: flex;
+  gap: 10px;
+}
+
 .typewriter-button {
   background-color: #333; /* Dark background like vintage typewriter keys */
   color: #fff; /* White text color */
   font-family: "Courier New", monospace;
   font-size: 1rem;
+  text-align: center;
   padding: 10px 15px;
   border-radius: 50%; /* Round shape to mimic typewriter keys */
   border: 2px solid #444; /* Slightly lighter border for contrast */
