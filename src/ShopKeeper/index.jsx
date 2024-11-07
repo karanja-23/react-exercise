@@ -10,13 +10,22 @@ function ShopKeeperApp(){
             <thead>
                 <th>no</th>
                 <th>Name</th>
-                <th>unit_price</th>
+                <th>unit_cost</th>
                 <th>qty</th>
                 <th>Total</th>
             </thead>
             <tbody>
                 {items.map((item)=>{
-                    return <td></td>
+                    return (
+                    <tr>
+                        <td>{item.no}</td>
+                        <td>{item.name}</td>
+                        <td>{item.unit_cost}</td>
+                        <td>{item.qty}</td>
+
+
+                    </tr>
+                    );
                 })}
             </tbody>
         </table>
