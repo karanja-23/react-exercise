@@ -22,7 +22,7 @@ function ShopKeeperApp() {
               <td>{item.name}</td>
               <td>{item.unit_cost}</td>
               <td>{item.qty}</td>
-              <td>{(item.unit_cost * item.qty).toLocaleString()}</td>
+              <td>Ksh {(item.unit_cost * item.qty).toLocaleString()}</td>
             </tr>
           ))}
         </tbody>
