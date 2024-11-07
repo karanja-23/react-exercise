@@ -1,20 +1,19 @@
-import React from 'react';
-import items from './items';
-import './index.css';
+import React from "react";
+import items from "./items";
+import "./index.css";
 
 function ShopKeeperApp() {
-    return (
-        <div>
-            <table>
-                <thead>
-
-                <tr>
-                    <th>No</th>
-                    <th>Name</th>
-                    <th>Unit Cost</th>
-                    <th>Qty</th>
-                <th>Total</th>
-                </tr>
+  return (
+    <div>
+      <table>
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Name</th>
+            <th>Unit Cost</th>
+            <th>Qty</th>
+            <th>Total</th>
+          </tr>
         </thead>
         <tbody>
           {items.map((item, index) => (
@@ -23,7 +22,7 @@ function ShopKeeperApp() {
               <td>{item.name}</td>
               <td>{item.unit_cost}</td>
               <td>{item.qty}</td>
-              <td>{item.unit_cost * item.qty}</td>
+              <td>{(item.unit_cost * item.qty).toLocaleString()}</td>
             </tr>
           ))}
         </tbody>
