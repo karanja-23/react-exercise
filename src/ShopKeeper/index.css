@@ -1,88 +1,90 @@
 /* Basic table styles */
 table {
-    width: 100%;
-    border-collapse: collapse; /* Removes space between borders */
-    font-family: Arial, sans-serif;
-    margin: 20px 0;
+  width: 100%;
+  border-collapse: collapse; /* Removes space between borders */
+  font-family: Arial, sans-serif;
+  margin: 20px 0;
+}
+
+/* Header styling */
+thead th {
+  background-color: #4caf50; /* Header background color */
+  color: white; /* Header text color */
+  font-weight: bold;
+  padding: 10px;
+  border: 1px solid #ddd; /* Border for header cells */
+  text-align: left;
+}
+
+/* Row styling */
+tbody tr {
+  border: 1px solid #ddd; /* Border for rows */
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2; /* Zebra stripe for even rows */
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1; /* Hover effect */
+}
+
+/* Cell styling */
+td {
+  padding: 10px;
+  border: 1px solid #ddd; /* Border for cells */
+}
+.typewriter-button {
+  background-color: #333; /* Dark background like vintage typewriter keys */
+  color: #fff; /* White text color */
+  font-family: "Courier New", monospace;
+  font-size: 1rem;
+  padding: 10px 15px;
+  border-radius: 50%; /* Round shape to mimic typewriter keys */
+  border: 2px solid #444; /* Slightly lighter border for contrast */
+  box-shadow: 0px 4px 0px #222,
+    /* Shadow for 3D effect */ 0px 4px 6px rgba(0, 0, 0, 0.4); /* Additional blur for depth */
+  transition: transform 0.1s ease-in-out;
+  outline: none;
+  cursor: pointer;
+  margin: "10px";
+}
+
+.typewriter-button:active {
+  transform: translateY(4px); /* Pressed effect */
+  box-shadow: 0px 1px 0px #222; /* Reduced shadow on press */
+}
+
+/* Optional: Responsive styling for smaller screens */
+@media (max-width: 600px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
   }
-  
-  /* Header styling */
-  thead th {
-    background-color: #4CAF50; /* Header background color */
-    color: white; /* Header text color */
-    font-weight: bold;
-    padding: 10px;
-    border: 1px solid #ddd; /* Border for header cells */
-    text-align: left;
+
+  thead {
+    display: none; /* Hide headers */
   }
-  
-  /* Row styling */
-  tbody tr {
-    border: 1px solid #ddd; /* Border for rows */
+
+  tr {
+    margin-bottom: 10px;
   }
-  
-  tbody tr:nth-child(even) {
-    background-color: #f2f2f2; /* Zebra stripe for even rows */
-  }
-  
-  tbody tr:hover {
-    background-color: #f1f1f1; /* Hover effect */
-  }
-  
-  /* Cell styling */
+
   td {
-    padding: 10px;
-    border: 1px solid #ddd; /* Border for cells */
+    text-align: right;
+    position: relative;
+    padding-left: 50%;
   }
-  .typewriter-button {
-    background-color: #333;             /* Dark background like vintage typewriter keys */
-    color: #fff;                        /* White text color */
-    font-family: 'Courier New', monospace;
-    font-size: 1rem;
-    padding: 10px 15px;
-    border-radius: 50%;                 /* Round shape to mimic typewriter keys */
-    border: 2px solid #444;             /* Slightly lighter border for contrast */
-    box-shadow: 0px 4px 0px #222,       /* Shadow for 3D effect */
-                0px 4px 6px rgba(0, 0, 0, 0.4); /* Additional blur for depth */
-    transition: transform 0.1s ease-in-out;
-    outline: none;
-    cursor: pointer;
-    margin:"10px"
+
+  td::before {
+    content: attr(data-label); /* Add data-label for each cell */
+    position: absolute;
+    left: 10px;
+    white-space: nowrap;
+    font-weight: bold;
   }
-  
-  .typewriter-button:active {
-    transform: translateY(4px);         /* Pressed effect */
-    box-shadow: 0px 1px 0px #222;       /* Reduced shadow on press */
-  }
-  
-  
-  /* Optional: Responsive styling for smaller screens */
-  @media (max-width: 600px) {
-    table, thead, tbody, th, td, tr {
-      display: block;
-    }
-  
-    thead {
-      display: none; /* Hide headers */
-    }
-  
-    tr {
-      margin-bottom: 10px;
-    }
-  
-    td {
-      text-align: right;
-      position: relative;
-      padding-left: 50%;
-    }
-  
-    td::before {
-      content: attr(data-label); /* Add data-label for each cell */
-      position: absolute;
-      left: 10px;
-      white-space: nowrap;
-      font-weight: bold;
-    }
-  }
-  
-  
+}
