@@ -22,6 +22,7 @@ function ShopKeeperApp(){
                         <td>{item.name}</td>
                         <td>{item.unit_cost}</td>
                         <td>{item.qty}</td>
+                        <td>{item.unit_cost * item.qty}</td>
 
 
                     </tr>
