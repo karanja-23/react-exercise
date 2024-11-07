@@ -18,7 +18,7 @@ function ShopKeeperApp(){
                 {items.map((item)=>{
                     return (
                     <tr>
-                        <td>{item.no}</td>
+                        <td>{rowNumber}</td>
                         <td>{item.name}</td>
                         <td>{item.unit_cost}</td>
                         <td>{item.qty}</td>
