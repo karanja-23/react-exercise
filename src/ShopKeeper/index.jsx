@@ -1,37 +1,35 @@
-import items from "./items"
+import React from 'react';
+import items from './items';
+import './index.css';
 
-//Create a Table row component
+function ShopKeeperApp() {
+    return (
+        <div>
+            <table>
+                <thead>
 
-import "./index.css"
-
-function ShopKeeperApp(){
-    return <div>
-        <table>
-            <thead>
-                <th>no</th>
-                <th>Name</th>
-                <th>unit_cost</th>
-                <th>qty</th>
+                <tr>
+                    <th>No</th>
+                    <th>Name</th>
+                    <th>Unit Cost</th>
+                    <th>Qty</th>
                 <th>Total</th>
-            </thead>
-            <tbody>
-                {items.map((item)=>{
-                    return (
-                    <tr>
-                        <td>{rowNumber}</td>
-                        <td>{item.name}</td>
-                        <td>{item.unit_cost}</td>
-                        <td>{item.qty}</td>
-                        <td>{item.unit_cost * item.qty}</td>
-
-
-                    </tr>
-                    );
-                })}
-            </tbody>
-        </table>
+                </tr>
+        </thead>
+        <tbody>
+          {items.map((item, index) => (
+            <tr key={index}>
+              <td>{index + 1}</td>
+              <td>{item.name}</td>
+              <td>{item.unit_cost}</td>
+              <td>{item.qty}</td>
+              <td>{item.unit_cost * item.qty}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
+  );
 }
 
-
-export default ShopKeeperApp
+export default ShopKeeperApp;
